@@ -11,6 +11,7 @@ call print_nl
 mov bx, HELLO
 call print
 
+call 1000h
 
 cli
 hlt
