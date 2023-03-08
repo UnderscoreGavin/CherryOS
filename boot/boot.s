@@ -7,6 +7,7 @@ mov sp, bp
 
 mov al, 's'
 int 10h
+call print_nl
 mov bx, HELLO
 call print
 
@@ -16,12 +17,8 @@ hlt
 jmp $
 
 %include "print.s"
+%include "data.s"
 
-HELLO:
-    db 'Hello, World', 0
-
-GOODBYE:
-    db 'Goodbye', 0
 
 times 510-($-$$) db 0
 dw 0xaa55

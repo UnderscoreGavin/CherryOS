@@ -13,3 +13,13 @@ print:
 .done:
     popa
     ret
+
+print_nl:
+    pusha
+    mov ah, 0eh
+    mov al, 10
+    int 10h
+    mov al, 13
+    int 10h
+    popa
+    ret
